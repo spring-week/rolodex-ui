@@ -8,6 +8,7 @@ import { AllComponent } from './components/all/all.component';
 import { MainComponent } from './components/main/main.component';
 import { FindComponent } from './components/find/find.component';
 import { RegisterComponent } from './components/register/register.component';
+import { RemoveComponent } from './components/remove/remove.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RegisterComponent } from './components/register/register.component';
     AllComponent,
     MainComponent,
     FindComponent,
-    RegisterComponent
+    RegisterComponent,
+    RemoveComponent
   ],
   imports: [
     BrowserModule,
