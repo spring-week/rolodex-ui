@@ -19,25 +19,16 @@ export class FindComponent {
 
   constructor(private userService: UserService) { }
 
-  // findUsernew() {
-  //   // call the user service's findUserById() method and  pass that thru
-  //   of(this.userService.findUserById(this.userId).subscribe({
-  //     next: (data) => this.user = data,
-  //     error: () => this.clientMessage.message = `Can't find the User with id ${this.userId}`,
-  //     complete: () => console.log('complete')
-  //   })
-  // }
-
   findUser() {
-    // call the user service's findUserById() method and  pass that thru
+    // call the user service's findUserById() method
     this.userService.findUserById(this.userId)
-      .subscribe(
-        data => {
-          this.user = data;
-          this.clientMessage.message = '';
-        },
-        // rejection callback in the case it doesn't work out
-        () => this.clientMessage.message = `Can't find the User with id ${this.userId}`
-      );
+    .subscribe({
+      next: (data) => {
+        this.user = data;
+        this.clientMessage.message = '';
+      },
+      error: () => this.clientMessage.message = `Can't find the User with id ${this.userId}`,
+      complete: () => console.log('complete')
+    })
   }
 }
