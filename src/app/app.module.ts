@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AllComponent } from './components/all/all.component';
 import { MainComponent } from './components/main/main.component';
+import { FormsModule } from '@angular/forms';
 import { FindComponent } from './components/find/find.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RemoveComponent } from './components/remove/remove.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { RemoveComponent } from './components/remove/remove.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
